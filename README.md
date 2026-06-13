@@ -22,8 +22,11 @@ cp .env.local .env.local.bak   # it's already pre-configured
 npm run dev           # http://localhost:3000
 ```
 
----
+```
+# CMD sekali jalan
+  bash scripts/install-deps.sh && npm ci && npm run build
 
+````
 ## 📁 Project Structure
 
 ```
