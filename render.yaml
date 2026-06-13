@@ -1,0 +1,48 @@
+# render.yaml
+# Render Blueprint — deploy FBDrop dengan satu klik
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: fbdrop
+    runtime: node
+    region: singapore   # Paling dekat untuk user Indonesia
+    plan: free
+
+    # ── Build ────────────────────────────────────────────
+    buildCommand: |
+      npm ci &&
+      node scripts/download-ytdlp.js &&
+      apt-get install -y ffmpeg &&
+      npm run build
+
+    startCommand: npm start
+
+    # ── Health check ─────────────────────────────────────
+    healthCheckPath: /api/health
+
+    # ── Auto-deploy on push ───────────────────────────────
+    autoDeploy: true
+
+    # ── Environment variables ─────────────────────────────
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      - key: DEMO_MODE
+        value: false           # yt-dlp tersedia di server Render
+
+      - key: YTDLP_PATH
+        value: ./bin/yt-dlp   # downloaded via scripts/download-ytdlp.js
+
+      - key: FFMPEG_PATH
+        value: ffmpeg          # installed via apt
+
+      - key: RATE_LIMIT_RPM
+        value: 10
+
+      - key: MAX_FILE_SIZE_MB
+        value: 500
+
+      - key: PORT
+        value: 3000

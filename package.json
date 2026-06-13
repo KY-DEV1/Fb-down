@@ -1,0 +1,33 @@
+{
+  "name": "fbdrop",
+  "version": "1.0.0",
+  "description": "Facebook Video & Reels Downloader — Next.js Full Stack",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p ${PORT:-3000}",
+    "lint": "next lint",
+    "build:render": "bash scripts/install-deps.sh && next build",
+    "postinstall": "node scripts/download-ytdlp.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "framer-motion": "^11.3.0",
+    "axios": "^1.7.2",
+    "fluent-ffmpeg": "^2.1.3",
+    "which": "^4.0.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5"
+  }
+}
