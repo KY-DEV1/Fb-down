@@ -17,7 +17,7 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 
 # Install ffmpeg + curl
-RUN apk add --no-cache ffmpeg curl
+RUN apk add --no-cache ffmpeg curl python3
 
 # Create bin dir for yt-dlp
 RUN mkdir -p /app/bin
