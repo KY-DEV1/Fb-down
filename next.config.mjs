@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Required for Docker/Railway deployment
+  output: 'standalone',
+
   // Allow images from external domains (thumbnails)
   images: {
     remotePatterns: [
