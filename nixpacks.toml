@@ -2,7 +2,6 @@
 # Railway pakai Nixpacks sebagai build system.
 # File ini memastikan ffmpeg tersedia saat build & runtime.
 
-[providers]
 providers = ["node"]
 
 [phases.setup]
