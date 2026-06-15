@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start -p ${PORT:-3000}",
     "lint": "next lint",
-    "build:render": "bash scripts/install-deps.sh && next build",
-    "postinstall": "node scripts/download-ytdlp.js"
+    "build:railway": "node scripts/download-ytdlp.js && next build",
+    "build:render": "bash scripts/install-deps.sh && next build"
   },
   "engines": {
     "node": ">=18.0.0"

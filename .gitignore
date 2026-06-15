@@ -5,12 +5,13 @@ node_modules/
 .next/
 out/
 
-# Environment
+# Environment (JANGAN commit ini!)
 .env
 .env.local
 .env.production.local
+.env.development.local
 
-# yt-dlp binary (re-downloaded on postinstall)
+# yt-dlp binary (Railway download otomatis saat build)
 bin/
 
 # OS
@@ -21,5 +22,5 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# Build
+# Build output
 dist/
