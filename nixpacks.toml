@@ -3,7 +3,7 @@
 # File ini memastikan ffmpeg tersedia saat build & runtime.
 
 [phases.setup]
-nixPkgs = ["nodejs_20", "nodePackages.npm", "ffmpeg", "curl"]
+nixPkgs = ["ffmpeg", "curl"]
 
 [phases.install]
 cmds = ["npm ci"]
