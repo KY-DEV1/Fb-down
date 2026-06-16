@@ -1,10 +1,10 @@
 'use client';
 import { useState, useRef, useCallback } from 'react';
 import Image from 'next/image';
-import Toast, { showToast } from '@/components/Toast';
-import ProgressSteps from '@/components/ProgressSteps';
-import QualityGrid from '@/components/QualityGrid';
-import HistoryPanel, { useDownloadHistory } from '@/components/HistoryPanel';
+import Toast, { showToast } from '../components/Toast';
+import ProgressSteps from '../components/ProgressSteps';
+import QualityGrid from '../components/QualityGrid';
+import HistoryPanel, { useDownloadHistory } from '../components/HistoryPanel';
 
 // ── Progress phases ────────────────────────────────────────────────────────────
 const PHASES = [

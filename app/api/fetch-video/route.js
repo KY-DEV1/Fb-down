@@ -11,8 +11,8 @@ import {
   fetchVideoInfo,
   getMockVideoInfo,
   formatFileSize,
-} from '@/lib/ytdlp';
-import { rateLimit } from '@/lib/rateLimit';
+} from '../../../lib/ytdlp';
+import { rateLimit } from '../../../lib/rateLimit';
 
 const DEMO_MODE = process.env.DEMO_MODE !== 'false';
 

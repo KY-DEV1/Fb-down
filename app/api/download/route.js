@@ -5,8 +5,8 @@
  */
 
 import { NextResponse } from 'next/server';
-import { validateFacebookUrl, createDownloadStream, createAudioStream } from '@/lib/ytdlp';
-import { rateLimit } from '@/lib/rateLimit';
+import { validateFacebookUrl, createDownloadStream, createAudioStream } from '../../../lib/ytdlp';
+import { rateLimit } from '../../../lib/rateLimit';
 import { Readable } from 'stream';
 
 const DEMO_MODE = process.env.DEMO_MODE !== 'false';

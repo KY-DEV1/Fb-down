@@ -7,7 +7,7 @@
 
 import { NextResponse } from 'next/server';
 import { execSync } from 'child_process';
-import { getYtDlpPath } from '@/lib/ytdlp';
+import { getYtDlpPath } from '../../../lib/ytdlp';
 
 export const dynamic = 'force-dynamic';
 
