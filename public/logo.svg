@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5b72f8"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="arrow" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded rect -->
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <!-- Play triangle -->
+  <path d="M22 18 L22 46 L46 32 Z" fill="white" opacity="0.15"/>
+  <!-- Download arrow -->
+  <path d="M32 20 L32 36" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M24 30 L32 38 L40 30" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Bottom bar -->
+  <path d="M20 44 L44 44" stroke="white" stroke-width="3.5" stroke-linecap="round" opacity="0.8"/>
+</svg>
